@@ -4,21 +4,21 @@
 #include <string.h>
 #include "backlog.h"
 
-// Definições
+// DefiniÃ§Ãµes
 #define L 100
 
-// Funções
+// FunÃ§Ãµes
 void menu(void);
 
-// Ponteiros e Vetores e Variáveis Globais
+// Ponteiros e Vetores e VariÃ¡veis Globais
 int opMenu1 = 0;
 
 int main(){
 
-    // Definindo a localização para PT-BR (Permitir acentuação)
+    // Definindo a localizaÃ§Ã£o para PT-BR (Permitir acentuaÃ§Ã£o)
     setlocale(LC_ALL, "Portuguese");
 
-    // Ponteiros e Vetores e Variáveis
+    // Ponteiros e Vetores e VariÃ¡veis
     Ativ * vetAtiv[L];
     inicializar(vetAtiv, L);
     int pos = 0;
@@ -37,9 +37,8 @@ int main(){
                 buscar(vetAtiv, pos);
                 break;
             case 3:
-                //[3] Alterar conteúdo da atividade
+                //[3] Alterar conteÃºdo da atividade
                 alterar(vetAtiv, pos);
-                //comprar(vetAtiv, pos, codproc, qtd);
                 break;
             case 4:
                 //[4] Excluir atividade registrada
@@ -58,7 +57,7 @@ int main(){
                 //[9] Sair
                 break;
             default:
-                printf("\n\t\tOpção Invalida, digite novamente.\n\n");
+                printf("\n\t\tOpÃ§Ã£o Invalida, digite novamente.\n\n");
                 system("pause");
         }
     }while(opMenu1 != 9);
@@ -84,13 +83,13 @@ void menu(void) {
     printf("\n");
     printf("\t\t[1] Cadastrar nova atividade\n");
     printf("\t\t[2] Buscar atividade existente\n");
-    printf("\t\t[3] Alterar conteúdo da atividade\n");
+    printf("\t\t[3] Alterar conteÃºdo da atividade\n");
     printf("\t\t[4] Excluir atividade registrada\n");
     printf("\t\t[5] Listar todas atividades registradas\n");
     printf("\t\t[6] Listar atividades em ordem prioritaria\n");
     printf("\n");
     printf("\t\t[9] Sair\n");
-    printf("\n\t\tDigite a opção desejada: ");
+    printf("\n\t\tDigite a opÃ§Ã£o desejada: ");
     scanf("%d", &opMenu1);
     getchar();
     printf("\n");
